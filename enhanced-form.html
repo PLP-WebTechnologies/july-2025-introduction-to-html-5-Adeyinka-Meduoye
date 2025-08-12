@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demonstration of HTML5 lists, tables, media embedding, and forms with built-in validation.">
+    <meta name="author" content="Adeyinka Meduoye">
+    <title>Adeyinka's HTML5 Advanced Content & Forms</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 Content & Forms Assignment</h1>
+        <p>This page demonstrates lists, tables, media embedding, and advanced HTML5 form techniques with native validation.</p>
+    </header>
+
+    <main>
+
+        <!-- Lists Section -->
+        <section aria-labelledby="lists-heading">
+            <h2 id="lists-heading">1. Lists</h2>
+            <article>
+                <h3>Unordered List: Web Development Skills</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Accessibility</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Ordered List: Steps to Build a Website</h3>
+                <ol>
+                    <li>Plan your layout</li>
+                    <li>Write HTML structure</li>
+                    <li>Apply styling with CSS</li>
+                    <li>Add interactivity with JavaScript</li>
+                </ol>
+            </article>
+        </section>
+
+        <!-- Table Section -->
+        <section aria-labelledby="table-heading">
+            <h2 id="table-heading">2. Table</h2>
+            <table border="1">
+                <caption>HTML5 Form Input Types Overview</caption>
+                <thead>
+                    <tr>
+                        <th>Input Type</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>text</td>
+                        <td>Standard single-line text field</td>
+                        <td><input type="text" placeholder="Enter text"></td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>Validates an email address format</td>
+                        <td><input type="email" placeholder="you@example.com"></td>
+                    </tr>
+                    <tr>
+                        <td>date</td>
+                        <td>Provides a date picker</td>
+                        <td><input type="date"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Media Section -->
+        <section aria-labelledby="media-heading">
+            <h2 id="media-heading">3. Media</h2>
+            <article>
+                <h3>Embedded Image</h3>
+                <img src="https://via.placeholder.com/400x200" alt="Placeholder sample image" width="400" height="200">
+            </article>
+            <article>
+                <h3>Embedded Audio</h3>
+                <audio controls>
+                    <source src="sample-audio.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </article>
+            <article>
+                <h3>Embedded Video</h3>
+                <video controls width="400">
+                    <source src="sample-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </article>
+        </section>
+
+        <!-- Form Section -->
+        <section aria-labelledby="form-heading">
+            <h2 id="form-heading">4. Registration Form</h2>
+            <form action="#" method="post">
+                
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3" autocomplete="name">
+                    
+                    <br><br>
+                    
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+                    
+                    <br><br>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+2348012345678" pattern="^\+?\d{10,15}$" required autocomplete="tel">
+                    
+                    <br><br>
+                    
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Account Details</legend>
+                    
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required minlength="5" maxlength="15" autocomplete="username">
+                    
+                    <br><br>
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required minlength="8" placeholder="Min. 8 characters" autocomplete="new-password">
+                    
+                    <br><br>
+                    
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required minlength="8" autocomplete="new-password">
+                    
+                    <br><br>
+                    
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">--Select--</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="prefer-not">Prefer not to say</option>
+                    </select>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Preferences</legend>
+                    
+                    <p>Subscribe to newsletter?</p>
+                    <label>
+                        <input type="radio" name="newsletter" value="yes" required> Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="newsletter" value="no"> No
+                    </label>
+                    
+                    <br><br>
+                    
+                    <label for="interests">Select your interests:</label>
+                    <select id="interests" name="interests[]" multiple size="3" required>
+                        <option value="coding">Coding</option>
+                        <option value="design">Design</option>
+                        <option value="marketing">Marketing</option>
+                    </select>
+                </fieldset>
+
+                <br>
+
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Reset Form</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Adeyinka Meduoye. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
